@@ -1,0 +1,1 @@
+char* toStringUpper(char* string);

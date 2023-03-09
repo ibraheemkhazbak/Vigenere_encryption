@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "character.h": "c",
+        "string.h": "c",
+        "encryption.h": "c",
+        "strings.h": "c",
+        "characters.h": "c",
+        "commands.h": "c"
+    }
+}
