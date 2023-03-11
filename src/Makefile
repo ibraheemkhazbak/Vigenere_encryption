@@ -1,2 +1,2 @@
 all:
-	gcc -o program main.c encryption_decryption/encryption.c encryption_decryption/decryption.c encryption_decryption/shared.c command/commands.c string/strings.c 
+	gcc -o program main.c encryption/encryption.c encryption/decryption.c encryption/shared.c command/commands.c utils/strings.c 

@@ -3,7 +3,7 @@
 #include<string.h>
 #include<ctype.h>
 #include"commands.h"
-#include"../string/strings.h"
+#include"../utils/strings.h"
 
 char* getCleanKeyString(char* string);
 int getCleanStringLength(char* string);
@@ -29,16 +29,16 @@ void verifyValidCommand(int argc,char** argv){
 
 struct EncryptDecryptParams extractCommandData(int argc,char** argv){
       struct EncryptDecryptParams parameters;
-       parameters.isEncryption = isEncrypt(argv[1]);
+       parameters.action = getAction(argv[1]);
        parameters.string = toStringUpper(argv[2]);
        parameters.key = getCleanKeyString(toStringUpper(argv[3]));
        return parameters;
 }
-char isEncrypt(char* parameter){
+enum Action getAction(char* parameter){
     if(!strcmp(parameter,ENCRYPT)){
-        return 1;
+        return ENCRYPTION;
     }else if(!strcmp(parameter,DECRYPT)){
-        return 0;
+        return DECRYPTION;
     }
 }
 char* getCleanKeyString(char* string){

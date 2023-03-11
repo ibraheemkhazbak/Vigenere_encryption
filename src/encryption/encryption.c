@@ -8,7 +8,6 @@
 char* encrypt(char* string,char* key){
 int keyLength=strlen(key);
 int stringLength=strlen(string);
-int stringSize=stringLength+1;
 char* encryptedText=malloc(sizeof(char)*stringLength+1);
 encryptedText[stringLength]=0;
 char x,y;

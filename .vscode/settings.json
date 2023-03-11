@@ -5,6 +5,8 @@
         "encryption.h": "c",
         "strings.h": "c",
         "characters.h": "c",
-        "commands.h": "c"
+        "commands.h": "c",
+        "types.h": "c",
+        "shared.h": "c"
     }
 }
